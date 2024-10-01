@@ -1,0 +1,5 @@
+package com.greet.controller;
+
+public class GreetController {
+
+}

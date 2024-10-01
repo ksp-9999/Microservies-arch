@@ -1,0 +1,18 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: ApiGateway
+  cloud:
+    gateway:
+      routes:
+      - id: welcomeapi
+        uri: lb://PERSONAPI
+        predicates:
+        - Path=/person
+      - id: greetapi
+        uri: lb://GREET
+        predicates:
+        - Path=/greet
+
+          
